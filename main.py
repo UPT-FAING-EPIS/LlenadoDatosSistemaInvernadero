@@ -1,12 +1,25 @@
-import sys
+from Model.Datos import Datos
+from Model.PolinomioInterpolante import PolinomioInterpolante
+from Controller.Controlador import Controlador
+from View.viewWinMain import Vista
+from PyQt5.QtWidgets import QApplication
 
-import PyQt5
-from PyQT5.QtWidgets import QMainWindow
+if __name__ == '__main__':
+    # Inicializar la aplicación de PyQt5
+    app = QApplication([])
 
-class MainWin(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__()
+    # Instanciar las clases del modelo
+    datos = Datos(archivo='', db_host='localhost', db_user='root', db_password='', db_name='mediciones')
+    interpolante = PolinomioInterpolante(13, 13)
 
+    # Instanciar la clase del controlador
+    controlador = Controlador(datos, interpolante)
 
-if __name__=='main':
-    print("Iniciando")
+    # Instanciar la clase de la vista
+    vista = Vista(controlador)
+
+    # Mostrar la vista
+    vista.initUI()
+
+    # Ejecutar la aplicación de PyQt5
+    app.exec_()
