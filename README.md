@@ -5,3 +5,5 @@ LlenadoDatosSistemaInvernadero
  
 Use
 pip install -r requirements.txt
+
+![Sonarqube](https://user-images.githubusercontent.com/102818449/231925369-202d1819-7fe2-4ab8-b971-2451ee994919.jpg)
