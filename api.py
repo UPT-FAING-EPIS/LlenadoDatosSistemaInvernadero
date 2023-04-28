@@ -4,10 +4,12 @@ from flasgger import Swagger
 from Controller.mainController import SplineController
 import requests
 from Database.database import Database
-
+from flask_wtf.csrf import CSRFProtect
 db = Database('localhost', 'root', '', 'invernadero')
 
 app = Flask(__name__)
+csrf = CSRFProtect()
+csrf.init_app(app)
 swagger_config = {
     "headers": [],
     "specs": [
