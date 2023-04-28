@@ -3,6 +3,10 @@ from flask import Flask, jsonify, request
 from flasgger import Swagger
 from Controller.mainController import SplineController
 import requests
+from Database.database import Database
+
+db = Database('localhost', 'root', '', 'invernadero')
+
 app = Flask(__name__)
 swagger_config = {
     "headers": [],
@@ -29,14 +33,19 @@ stored_data = None
 
 @app.route('/api/temperature', methods=['POST'])
 def get_temperature():
-    global stored_data
+    
     input_data = request.json
     time_values = input_data['time_values']
     temperature_values = input_data['temperature_values']
     time_points = input_data['time_points']
 
     result = controller.find_temperatures(time_values, temperature_values, time_points)
+
+    
     stored_data = result.tolist()
+    for i in range(len(time_points)):
+      
+        db.insert_temperature(time_points[i], stored_data[i])
     return jsonify({"temperature": stored_data})
 
 
