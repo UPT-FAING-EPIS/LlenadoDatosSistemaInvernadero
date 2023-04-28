@@ -9,6 +9,6 @@ class SplineController:
     def run(self):
         self.view.start()
 
-    def find_roots(self, x_values, y_values, y_punto):
-        self.model = SplineModel(x_values, y_values)
-        return self.model.find_roots(y_punto)
+    def find_temperatures(self, time_values, temperature_values, time_points):
+        self.model = SplineModel(time_values, temperature_values)
+        return self.model.evaluate_spline(time_points)
