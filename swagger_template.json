@@ -1,0 +1,86 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "A swagger API",
+      "version": "0.0.1"
+    },
+    "paths": {
+      "/api/temperature": {
+        "post": {
+          "summary": "Send temperature data",
+          "description": "Send time values, temperature values, and time points for interpolation",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "time_values": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "temperature_values": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "time_points": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully processed the data and returned interpolated temperatures",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "temperature": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/stored_temperature": {
+        "get": {
+          "summary": "Retrieve stored temperature data",
+          "description": "Get the stored temperature data",
+          "responses": {
+            "200": {
+              "description": "Successfully retrieved the stored temperature data",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "temperature": {
+                    "type": "array",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "No data available"
+            }
+          }
+        }
+      }
+    }
+  }
+  

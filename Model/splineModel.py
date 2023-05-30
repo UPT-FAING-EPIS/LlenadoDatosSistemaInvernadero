@@ -7,10 +7,10 @@ class SplineModel:
         self.time = time
         self.temperature = temperature
         self.spl = splrep(time, temperature)
-
+    
     def evaluate_spline(self, time_new):
         return splev(time_new, self.spl)
-
+    
     def find_temperature(self, time_point):
         # Function that returns the difference between the value of the spline at a time point and a given temperature value
         def f(temperature, time_punto, spl):
@@ -26,3 +26,4 @@ class SplineModel:
                 break
 
         return temperature
+
