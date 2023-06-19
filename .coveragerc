@@ -1,0 +1,5 @@
+[run]
+omit = 
+    */Features/*
+    main.py
+    api.py

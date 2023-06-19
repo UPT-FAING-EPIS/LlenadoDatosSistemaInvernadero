@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    container_name: db
+    image: mysql
+    restart: always
+    command: --secure-file-priv="" 
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - ./db-data:/var/lib/mysql 
+    ports:
+      - "9906:3306"

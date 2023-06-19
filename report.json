@@ -1,0 +1,248 @@
+[
+{
+  "description": [
+    "The database should correctly insert and retrieve temperature data."
+  ],
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "features/database.feature:4",
+      "name": "Insert and retrieve temperature",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/database.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/database_steps.py:5"
+          },
+          "name": "a connection to the database",
+          "result": {
+            "duration": 0.0010006427764892578,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/database.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/database_steps.py:15"
+          },
+          "name": "a temperature is inserted at a specific time point",
+          "result": {
+            "duration": 0.00099945068359375,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/database.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/database_steps.py:21"
+          },
+          "name": "the same temperature should be retrieved when searched by that time point",
+          "result": {
+            "duration": 0.0010004043579101562,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/database.feature:1",
+  "name": "Database",
+  "status": "passed",
+  "tags": []
+},
+
+{
+  "description": [
+    "The spline controller should correctly find the temperatures given time values and temperature values."
+  ],
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "features/splineController.feature:4",
+      "name": "Find temperatures",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/splineController.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineController_steps.py:5"
+          },
+          "name": "time values and temperature values",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/splineController.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineController_steps.py:11"
+          },
+          "name": "the temperatures are calculated for the given time points",
+          "result": {
+            "duration": 0.0009982585906982422,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/splineController.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineController_steps.py:16"
+          },
+          "name": "all temperatures should be within the expected range",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/splineController.feature:1",
+  "name": "Spline Controller",
+  "status": "passed",
+  "tags": []
+},
+
+{
+  "description": [
+    "The Spline Model should correctly calculate temperatures based on provided time points."
+  ],
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "features/splineModel.feature:4",
+      "name": "Evaluate Spline",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/splineModel.feature:5",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineModel_steps.py:5"
+          },
+          "name": "time values and corresponding temperatures",
+          "result": {
+            "duration": 0.0009999275207519531,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/splineModel.feature:6",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineModel_steps.py:11"
+          },
+          "name": "the spline is evaluated at these time points",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/splineModel.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineModel_steps.py:15"
+          },
+          "name": "all returned temperatures should be close to the provided temperatures",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "features/splineModel.feature:9",
+      "name": "Find temperature",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/splineModel.feature:10",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineModel_steps.py:5"
+          },
+          "name": "time values and corresponding temperatures",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/splineModel.feature:11",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineModel_steps.py:20"
+          },
+          "name": "the temperature is searched at specific time points",
+          "result": {
+            "duration": 0.0009996891021728516,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/splineModel.feature:12",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/splineModel_steps.py:26"
+          },
+          "name": "the returned temperatures should be close to the expected temperatures",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/splineModel.feature:1",
+  "name": "Spline Model",
+  "status": "passed",
+  "tags": []
+}
+]

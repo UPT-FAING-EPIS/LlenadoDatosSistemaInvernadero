@@ -1,5 +1,7 @@
 asgiref==3.6.0
 attrs==23.1.0
+behave==1.2.6
+behave2cucumber==1.0.3
 blinker==1.6.2
 certifi==2022.12.7
 charset-normalizer==3.1.0
@@ -13,6 +15,7 @@ Flask==2.0.2
 Flask-JSON==0.3.5
 fonttools==4.39.3
 idna==3.4
+iniconfig==2.0.0
 itsdangerous==2.1.2
 Jinja2==3.1.2
 joblib==1.2.0
@@ -24,13 +27,21 @@ mistune==2.0.5
 mysql-connector-python==8.0.32
 numpy==1.24.2
 packaging==23.0
+parse==1.19.0
+parse-type==0.6.0
 Pillow==9.5.0
+pluggy==1.1.0
 protobuf==3.20.3
+py==1.11.0
 pyparsing==3.0.9
 PyQt5==5.15.9
 PyQt5-Qt5==5.15.2
 PyQt5-sip==12.11.1
 pyrsistent==0.19.3
+pytest==7.3.2
+pytest-cov==4.1.0
+pytest-html==3.2.0
+pytest-metadata==3.0.0
 python-dateutil==2.8.2
 PyYAML==6.0
 requests==2.29.0
