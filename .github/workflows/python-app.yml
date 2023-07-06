@@ -36,7 +36,7 @@ jobs:
         pytest
     - name: Run behave tests and generate report
       run: |
-        behave --format=json.pretty -o report.json
+        behave Features --format=json.pretty -o report.json
     - name: Generate cucumber.json from behave report
       run: |
         python -m behave2cucumber -i report.json -o cucumber.json
