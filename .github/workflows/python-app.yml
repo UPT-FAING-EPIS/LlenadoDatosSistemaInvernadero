@@ -51,16 +51,3 @@ jobs:
     - name: Run unit tests with coverage
       run: |
         pytest --cov=./ --cov-config=.coveragerc --cov-report=html --html=report.html
-    - name: Install gh-pages
-      run: |
-        npm install gh-pages
-    - name: Set git identity
-      run: |
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
-    - name: Deploy reports to GitHub Pages
-      run: |
-        mkdir report
-        mv cucumber_report.html report/cucumber_report.html
-        mv report.html report/report.html
-        npx gh-pages -d report
