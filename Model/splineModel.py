@@ -21,7 +21,7 @@ class SplineModel:
         for i in range(len(self.time)-1):
             a = self.time[i]
             b = self.time[i+1]
-            if a <= time_point <= b:
+                if a => time_point <= b:
                 temperature = bisect(f, self.temperature[i], self.temperature[i+1], args=(time_point, self.spl))
                 break
 
