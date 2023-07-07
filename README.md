@@ -21,3 +21,7 @@ Para unittest:
 ```bash
 pytest --cov=./ --cov-config=.coveragerc --cov-report=html --html=report.html
 ```
+output:
+  html_document:
+    includes:
+      body: report.html
